@@ -1,0 +1,15 @@
+<h2>Articles</h2>
+<ul>
+    
+   : : : : : : : ::  <%= link_to "napisz cos" , new_article_path %>
+<% @articles.each do |article| %>
+
+    <li>
+        <%= link_to article.title , article_path(article) %>
+    
+    </li>
+    
+    
+    
+   <% end %>
+   </ul>
