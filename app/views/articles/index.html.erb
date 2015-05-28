@@ -1,15 +1,10 @@
-<h2>Articles</h2>
-<ul>
-    
-   : : : : : : : ::  <%= link_to "napisz cos" , new_article_path %>
-<% @articles.each do |article| %>
+<h1> Articles list </h1>
 
-    <li>
-        <%= link_to article.title , article_path(article) %>
+
+  <% @articles.each do |article| %>
+    <%=  link_to article.title, article_path(article)%>  <%= link_to '(E)', edit_article_path(article) %></br>
+  <% end %>
+
+
     
-    </li>
-    
-    
-    
-   <% end %>
-   </ul>
+<%= link_to 'Add new article', '/articles/new' %>
