@@ -1,3 +1,3 @@
-class Comment < ActiveRecord::Base
-  belongs_to :article
-end
+has_many :comments, dependent: :destroy
+  validates :title, presence: true,
+                    length: { minimum: 5 }
